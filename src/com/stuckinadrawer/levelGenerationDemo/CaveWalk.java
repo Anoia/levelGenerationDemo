@@ -9,10 +9,10 @@ public class CaveWalk extends Generator {
 
     }
 
-    int currentX;
-    int currentY;
+    private int currentX;
+    private int currentY;
 
-    int floortiles;
+    int floorTiles;
 
     public CaveWalk(){
         this(70, 50);
@@ -24,7 +24,7 @@ public class CaveWalk extends Generator {
         currentX = levelWidth/2;
         currentY = levelHeight/2;
         level[currentX][currentY] = Tile.ROOM;
-        floortiles = levelWidth*levelHeight/3;
+        floorTiles = levelWidth*levelHeight/3;
         doStuff();
         return level;
     }
@@ -37,7 +37,7 @@ public class CaveWalk extends Generator {
 
     private void doStuff() {
       //  for(int i = 0; i < 100; i++){
-        while (floortiles > 0){
+        while (floorTiles > 0){
             int rand = Utils.random(1, 4);
             switch(rand){
                 case 1:
@@ -64,7 +64,7 @@ public class CaveWalk extends Generator {
 
             if(level[currentX][currentY] == Tile.EMPTY){
                 level[currentX][currentY] = Tile.ROOM;
-                floortiles--;
+                floorTiles--;
             }
 
 

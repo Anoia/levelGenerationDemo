@@ -8,10 +8,10 @@ import java.util.Comparator;
 
 public class ScatterLayout extends Generator{
 
-    private int roomCount;
+    private final int roomCount;
 
-    private int minRoomSize;
-    private int maxRoomSize;
+    private final int minRoomSize;
+    private final int maxRoomSize;
 
     private ArrayList<Room> rooms;
 
@@ -96,7 +96,7 @@ public class ScatterLayout extends Generator{
         for (Room roomA : rooms) {
             System.out.println("ROOM "+ rooms.indexOf(roomA) +" " + roomA.x + " "+roomA.y);
             Room roomB = getNextRoom(roomA);
-            System.out.println("conntected to: "+ rooms.indexOf(roomB) +" " + roomB.x + " "+roomB.y);
+            System.out.println("connected to: "+ rooms.indexOf(roomB) +" " + roomB.x + " "+roomB.y);
 
             int pointAX = Utils.random(roomA.x + 1, roomA.x + roomA.width - 1);
             int pointAY = Utils.random(roomA.y + 1, roomA.y + roomA.height - 1);

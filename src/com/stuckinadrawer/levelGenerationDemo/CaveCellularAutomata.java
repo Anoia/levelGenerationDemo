@@ -4,7 +4,7 @@ import com.stuckinadrawer.Utils;
 
 public class CaveCellularAutomata extends Generator {
 
-    int step = 0;
+    private int step = 0;
 
     public CaveCellularAutomata(int levelWidth, int levelHeight){
         super(levelWidth, levelHeight);

@@ -1,8 +1,8 @@
 package com.stuckinadrawer.levelGenerationDemo;
 
 public class Room {
-    int x;
-    int y;
+    final int x;
+    final int y;
     int width;
     int height;
 

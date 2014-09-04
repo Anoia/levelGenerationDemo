@@ -7,10 +7,10 @@ public class Leaf {
 
     private final static int MIN_LEAF_SIZE = 10;
 
-    public int x;
-    public int y;
-    public int width;
-    public int height;
+    private final int x;
+    private final int y;
+    public final int width;
+    public final int height;
 
     public Leaf leftChild, rightChild = null;
 
@@ -104,7 +104,7 @@ public class Leaf {
         }
     }
 
-    public void createHallway(Room roomA, Room roomB){
+    void createHallway(Room roomA, Room roomB){
         int pointAX = Utils.random(roomA.x + 1, roomA.x + roomA.width - 1);
         int pointAY = Utils.random(roomA.y + 1, roomA.y + roomA.height - 1);
 
@@ -124,7 +124,7 @@ public class Leaf {
         }
     }
 
-    public Room getRoom()
+    Room getRoom()
     {
         // iterate all the way through these leafs to find a room, if one exists.
         if (room != null)

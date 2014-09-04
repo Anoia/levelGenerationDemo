@@ -8,7 +8,7 @@ import java.awt.event.KeyListener;
 public class GeneratorDemo extends JFrame{
 
     private Tile[][] level;
-    private int tileSize = 16;
+    private final int tileSize = 16;
     private Generator g;
 
     public GeneratorDemo(){
@@ -141,7 +141,7 @@ public class GeneratorDemo extends JFrame{
         }
     }
 
-    public void createNewLevel(){
+    void createNewLevel(){
         level = g.generate();
         repaint();
     }

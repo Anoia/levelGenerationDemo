@@ -1,20 +1,20 @@
 package com.stuckinadrawer.levelGenerationDemo;
 
-public abstract class Generator {
+abstract class Generator {
 
     static Tile[][] level;
 
-    int levelWidth;
-    int levelHeight;
+    final int levelWidth;
+    final int levelHeight;
 
-    public Generator(int levelWidth, int levelHeight){
+    Generator(int levelWidth, int levelHeight){
         this.levelWidth = levelWidth;
         this.levelHeight = levelHeight;
     }
 
     public abstract Tile[][] generate();
 
-    public void initializeEmptyLevel() {
+    void initializeEmptyLevel() {
         level = new Tile[levelWidth][levelHeight];
 
         for (int x = 0; x < levelWidth; x++) {

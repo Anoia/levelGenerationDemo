@@ -7,16 +7,16 @@ import java.util.ArrayList;
 
 public class RogueAlgorithm extends Generator {
 
-    private int numRoomsHorizontal = 3;
-    private int numRoomsVertical = 3;
+    private final int numRoomsHorizontal = 3;
+    private final int numRoomsVertical = 3;
 
-    int roomWidth;
-    int roomHeight;
+    private final int roomWidth;
+    private final int roomHeight;
 
-    Point entrance;
-    Point exit;
+    private Point entrance;
+    private Point exit;
 
-    GridRoom[][] gridRooms;
+    private GridRoom[][] gridRooms;
 
     public RogueAlgorithm(int levelWidth, int levelHeight){
         super(levelWidth, levelHeight);
@@ -207,8 +207,8 @@ public class RogueAlgorithm extends Generator {
     }
 
     private class GridRoom {
-        int x;
-        int y;
+        final int x;
+        final int y;
         boolean connected = false;
         ArrayList<GridRoom> connectedGridRooms = new ArrayList<GridRoom>();
 
