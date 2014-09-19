@@ -33,7 +33,7 @@ public class ScatterLayout extends Generator{
     public Tile[][] generate(){
         initializeEmptyLevel();
         generateRooms();
-        buildBetterCorridors();
+        buildCorridors();
         putRoomsInMap();
 
         buildWalls();
@@ -81,7 +81,7 @@ public class ScatterLayout extends Generator{
         return false;
     }
 
-    private void buildBetterCorridors(){
+    private void buildCorridors(){
 
         Comparator<Room> comparator = new Comparator<Room>() {
             @Override
