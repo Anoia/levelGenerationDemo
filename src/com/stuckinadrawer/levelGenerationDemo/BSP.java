@@ -30,11 +30,9 @@ public class BSP extends Generator{
             didSplit = false;
             for(int i = 0; i < leaves.size(); i++){
                 Leaf leaf = leaves.get(i);
-                System.out.println("iterating");
                 //check if this leaf is already split
                 if(leaf.rightChild == null){
                     // if this leaf is too big or  75% chance
-                    System.out.println("ready to split");
                     if (leaf.width > MAX_LEAF_SIZE || leaf.height > MAX_LEAF_SIZE || Utils.random() > 0.25){
                         //Split the leaf
                         if(leaf.split()){

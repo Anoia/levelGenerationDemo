@@ -38,11 +38,11 @@ public class Leaf {
         // otherwise split randomly
 
         boolean splitH = Utils.randomBoolean();
-        if (width > height && height / width >= 0.05)
+        if (width > height && height / width >= 0.05) {
             splitH = false;
-        else if (height > width && width / height >= 0.05)
+        } else if (height > width && width / height >= 0.05) {
             splitH = true;
-
+        }
         int max = (splitH ? height : width) - MIN_LEAF_SIZE;
 
         if(max < MIN_LEAF_SIZE)
